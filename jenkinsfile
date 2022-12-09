@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                zowe jobs sub ds "z93477.jcl(compile)"
+                sh 'zowe jobs sub ds "z93477.jcl(compile)"'
             }
         }
         stage('Test') {
